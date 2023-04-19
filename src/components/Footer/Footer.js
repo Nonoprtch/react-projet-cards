@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 import "./Footer.css"
 
 const Footer = ({name}) => {
-  const [changeColor, setChangeColor] = useState("pink");
+  const [changeColor, setChangeColor] = useState("orange");
 
-  const StyleRed = {color: changeColor, fontSize: "25px"}
+  const StyleRed = {color: changeColor, fontSize: "20px"}
 
   return (
     <footer>
