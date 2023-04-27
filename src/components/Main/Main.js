@@ -37,6 +37,3 @@ return (
 
 
 export default UseEffectCompo;
-
-//  onClick={()=> {UpdateName("ou pas")}}
-// style={{height: 150, padding: "50px 10px"}}

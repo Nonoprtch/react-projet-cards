@@ -1,18 +1,20 @@
-import React from 'react'
-import Navbar from '../NavBar/Navbar'
-import Footer from '../Footer/Footer'
+import React, { Component } from 'react';
+import Navbar from '../NavBar/Navbar';
+import Footer from '../Footer/Footer';
 
-const Layout = ({children, footer}) => {
-  return (
-    <>
-    <Navbar/>
-    {children}
-    {footer === true  &&
-     <Footer />
-    }
-   
-    </>
-  )
+class Layout extends Component {
+  render() {
+    const { children, footer } = this.props;
+    return (
+      <>
+        <Navbar />
+        {children}
+        {footer === true &&
+          <Footer />
+        }
+      </>
+    );
+  }
 }
 
-export default Layout
+export default Layout;

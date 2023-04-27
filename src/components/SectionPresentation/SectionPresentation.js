@@ -1,13 +1,15 @@
-import React from 'react'
-import responsiv from "../../assets/responsive.png"
-import "./SectionPresentation.css"
+import React, { Component } from 'react';
+import responsiv from "../../assets/responsive.png";
+import "./SectionPresentation.css";
 
-const SectionPresentation = () => {
-  return (
-    <section id="slider">
+class SectionPresentation extends Component {
+  render() {
+    return (
+      <section id="slider">
 			
-		</section>
-  )
+      </section>
+    );
+  }
 }
 
-export default SectionPresentation
+export default SectionPresentation;

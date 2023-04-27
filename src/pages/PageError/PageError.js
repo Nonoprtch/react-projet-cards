@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react';
 
-const PageError = () => {
-  return (
-    <div>
-      Vous etes Perdu 
-    </div>
-  )
+class PageError extends Component {
+  render() {
+    return (
+      <div>
+        Vous etes Perdu 
+      </div>
+    );
+  }
 }
 
-
-export default PageError
+export default PageError;

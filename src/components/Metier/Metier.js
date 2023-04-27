@@ -1,38 +1,37 @@
-import React, {useState} from 'react'
+import React, { Component } from 'react';
 
-const Metier = () => {
-    const [state, setState] = useState({
-        id: 1, 
-        metier : "Fullstack Dev", 
-        Niveau : "en formation"
-    });
+class Metier extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      id: 1,
+      metier: "Fullstack Dev",
+      Niveau: "en formation"
+    };
+  }
 
-   
-    const handleJunior = () => {
-     //   setState((prevstate)=>  ({...prevstate, Niveau: "Junior" }))
-        setState((prevstate)=> {
-            console.log("prevstate", prevstate)
-            return(
-                {...prevstate, Niveau: "Junior" }
-            )
-        })
-    }
-    const handleIntermediaire = () => {
-        setState((prevstate)=> ({...prevstate, Niveau: "Intermediaire" }))
-    }
-    const handleSenior = () => {
-        setState((prevstate)=> ({...prevstate, Niveau: "Senior" }))
-    }
+  handleJunior = () => {
+    this.setState((prevState) => ({...prevState, Niveau: "Junior"}));
+  }
 
-  return (
-    <div>
-        <h1>je suis  {state.metier}   {" "}  {state.Niveau}  </h1>
-        <button  onClick={() => handleJunior() }  >dans trois mois je serais </button>
-        <button  onClick={() => handleIntermediaire() }>dans un an je serais</button>
-        <button  onClick={() => handleSenior() }>Dans 5 ans je serais </button>
-      
-    </div>
-  )
+  handleIntermediaire = () => {
+    this.setState((prevState) => ({...prevState, Niveau: "Intermediaire"}));
+  }
+
+  handleSenior = () => {
+    this.setState((prevState) => ({...prevState, Niveau: "Senior"}));
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>je suis  {this.state.metier}   {" "}  {this.state.Niveau}  </h1>
+        <button  onClick={() => this.handleJunior() }>dans trois mois je serais </button>
+        <button  onClick={() => this.handleIntermediaire() }>dans un an je serais</button>
+        <button  onClick={() => this.handleSenior() }>Dans 5 ans je serais </button>
+      </div>
+    );
+  }
 }
 
-export default Metier
+export default Metier;
